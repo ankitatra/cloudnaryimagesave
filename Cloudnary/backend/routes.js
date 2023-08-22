@@ -15,29 +15,6 @@ router.get('/', async (req, res) => {
     }
   });
   
- 
-  
-  
-  
-// router.post('/users', async (req, res) => {
-//   try {
-//     const { username} = req.body;
-//     console.log(username)
-//    const result= cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg").then(result=>console.log(result));
-//    const newUser = new User({ username
-//         ,id_proof: {
-//         public_id: result.public_id,
-//         url: result.secure_url
-//   })
-
-//     const savedUser = await newUser.save();
-    
-//     res.status(201).json(savedUser);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to add user' });
-//     return error
-//   }
-// });
 
 router.post('/users', async (req, res) => {
     const { username,id_proof} = req.body;
